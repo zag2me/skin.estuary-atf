@@ -1,2 +1,8 @@
-﻿[B]1.0.0[/B]
+﻿[B]1.0.1[/B]
+• Add coloured media flags
+• Fix music Video Aspect Ratio
+• Add music star ratings in list view
+
+
+[B]1.0.0[/B]
 • Initial commit
