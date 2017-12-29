@@ -26,127 +26,120 @@
 					<viewtype label="List">list</viewtype>
 					<preloaditems>1</preloaditems>
 					<pagecontrol>60</pagecontrol>
-					<focusedlayout height="90">
+					<!-- Focused -->
+					<focusedlayout height="50">
+						<!-- Focused selection image-->	
 						<control type="image">
 							<left>0</left>
-							<top>0</top>
+							<top>10</top>
 							<right>0</right>
 							<bottom>0</bottom>
+							<height>50</height>
 							<texture colordiffuse="button_focus">lists/focus.png</texture>
 							<visible>Control.hasFocus(50)</visible>
 						</control>
+						<!-- Focused TV Channel Icon-->	
 						<control type="image">
-							<right>20</right>
+							<right>905</right>
 							<top>10</top>
 							<width>80</width>
-							<height>70</height>
+							<height>50</height>
 							<aspectratio align="right">keep</aspectratio>
 							<texture>$INFO[listitem.icon]</texture>
 						</control>
+						<!-- Focused Progress icon-->	
 						<control type="progress">
 							<left>105</left>
-							<top>58</top>
-							<width>50</width>
+							<top>28</top>
+							<width>40</width>
 							<height>12</height>
 							<midtexture border="3">progress/texturebg_white.png</midtexture>
 							<visible>ListItem.HasEpg</visible>
 							<info>ListItem.Progress</info>
 						</control>
+						<!-- Red Record button when focused -->
 						<control type="image">
-							<right>110</right>
-							<top>25</top>
+							<right>10</right>
+							<top>15</top>
 							<width>40</width>
 							<height>40</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
 						</control>
+						<!-- channel name and program when focused -->
 						<control type="label">
-							<left>105</left>
-							<top>8</top>
-							<height>90</height>
-							<right>120</right>
+							<left>155</left>
+							<top>17</top>
+							<height>50</height>
+							<right>130</right>
 							<aligny>top</aligny>
-							<font>font14</font>
+							<font>font10</font>
 							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
-							<label>$INFO[ListItem.Label]</label>
+							<label>$INFO[ListItem.Label] - $INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
-						</control>
+						</control>	
+						<!-- channel number when focused -->
 						<control type="label">
-							<left>165</left>
-							<top>46</top>
+							<left>0</left>
+							<top>14</top>
 							<height>90</height>
-							<right>120</right>
-							<aligny>top</aligny>
-							<font>font12</font>
-							<label>$INFO[ListItem.Title]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-						</control>
-						<control type="label">
-							<left>12</left>
-							<top>0</top>
-							<height>90</height>
-							<width>75</width>
+							<width>45</width>
 							<align>center</align>
-							<aligny>center</aligny>
-							<font>font32_title</font>
+							<aligny>top</aligny>
+							<font>font12_title</font>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
+							<textcolor>white</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
-						</control>
+						</control>						
 					</focusedlayout>
-					<itemlayout height="90">
+					<itemlayout height="50">
+						<!-- Unfocused channel icon -->
 						<control type="image">
-							<right>20</right>
-							<top>10</top>
+							<right>910</right>
+							<top>15</top>
 							<width>80</width>
-							<height>70</height>
+							<height>40</height>
 							<aspectratio align="right">keep</aspectratio>
 							<texture>$INFO[listitem.icon]</texture>
 						</control>
+						<!-- Left Hand Progress bar -->
 						<control type="progress">
 							<left>105</left>
-							<top>58</top>
-							<width>50</width>
+							<top>28</top>
+							<width>40</width>
 							<height>12</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
 							<visible>ListItem.HasEpg</visible>
 							<info>ListItem.Progress</info>
 						</control>
+						<!-- Red Record button when unselected -->
 						<control type="image">
-							<right>110</right>
-							<top>25</top>
+							<right>10</right>
+							<top>20</top>
 							<width>40</width>
 							<height>40</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
 						</control>
+						<!-- Channel Name Unselected -->
 						<control type="label">
-							<left>105</left>
-							<top>8</top>
-							<height>90</height>
-							<right>120</right>
+							<left>155</left>
+							<top>17</top>
+							<height>150</height>
+							<right>130</right>
 							<aligny>top</aligny>
-							<font>font14</font>
-							<label>$INFO[ListItem.Label]</label>
+							<font>font10</font>
+							<label>$INFO[ListItem.Label] - $INFO[ListItem.Title]</label>
 							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
+						<!-- channel number unselected -->
 						<control type="label">
-							<left>165</left>
-							<top>46</top>
+							<left>0</left>
+							<top>14</top>
 							<height>90</height>
-							<right>120</right>
-							<aligny>top</aligny>
-							<font>font12</font>
-							<label>$INFO[ListItem.Title]</label>
-							<shadowcolor>text_shadow</shadowcolor>
-							<textcolor>grey</textcolor>
-						</control>
-						<control type="label">
-							<left>12</left>
-							<top>0</top>
-							<height>90</height>
-							<width>75</width>
+							<width>45</width>
 							<align>center</align>
-							<aligny>center</aligny>
-							<font>font32_title</font>
+							<aligny>top</aligny>
+							<font>font12_title</font>
 							<label>$INFO[ListItem.ChannelNumberLabel]</label>
 							<textcolor>grey</textcolor>
 							<shadowcolor>text_shadow</shadowcolor>
@@ -169,7 +162,7 @@
 					<viewtype label="List">list</viewtype>
 					<preloaditems>1</preloaditems>
 					<pagecontrol>60</pagecontrol>
-					<focusedlayout height="70">
+					<focusedlayout height="50">
 						<control type="image">
 							<left>0</left>
 							<top>0</top>
@@ -210,7 +203,7 @@
 							<right>90</right>
 							<aligny>center</aligny>
 							<align>right</align>
-							<label>$INFO[ListItem.Title]</label>
+							<label>$INFO[ListItem.Title] hello</label>
 						</control>
 						<control type="label">
 							<left>12</left>
@@ -224,7 +217,7 @@
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 					</focusedlayout>
-					<itemlayout height="70">
+					<itemlayout height="50">
 						<control type="progress">
 							<right>10</right>
 							<top>25</top>
@@ -297,6 +290,7 @@
 					<orientation>vertical</orientation>
 					<animation effect="zoom" start="100,100" end="50,100" center="-48,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
 				</control>
+				<!-- Right side panel progress bar -->
 				<control type="group">
 					<left>0</left>
 					<top>202</top>
@@ -341,6 +335,7 @@
 						<label>[B]$INFO[ListItem.EpgEventTitle,,[CR]][/B]</label>
 					</control>
 				</control>
+				<!-- Panel TV Channel Logo -->
 				<control type="image">
 					<left>540</left>
 					<top>122</top>
