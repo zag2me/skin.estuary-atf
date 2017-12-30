@@ -48,9 +48,9 @@
 		<description lang="cs_CZ">Estuary je výchozí motiv pro Kodi 17.0 a vyšší. Jeho účelem je zjednodušit používání Kodi pro nové uživatele.</description>
 		<description lang="de_DE">Estuary ist der Standardskin für Kodi 17.0 und höher. Ziel war es, einen einfach zu bedienenden Skin für neue Kodi-User zu entwickeln.</description>
 		<description lang="el_GR">Το Estuary είναι η προεπιλεγμένη αμφίεση για τις εκδόσεις Kodi 17.0 και άνω. Επιχειρεί να είναι προσιτό στους αρχάριους χρήστες του Kodi για να το κατανοήσουν και να το χρησιμοποιήσουν.</description>
-		<description lang="en_GB">Estuary is the default skin for Kodi 17.0 and above. It attempts to be easy for first time Kodi users to understand and use.</description>
-		<description lang="en_NZ">Estuary is the default skin for Kodi 17.0 and above. It attempts to be easy for first time Kodi users to understand and use.</description>
-		<description lang="en_US">Estuary is the default skin for Kodi 17.0 and above. It attempts to be easy for first time Kodi users to understand and use.</description>
+		<description lang="en_GB">Estuary ATF is a modified version of Estuary designed to improve Live TV, Music and Music Video features. It is designed to be very close to Estuary and keep its great speed and simplicity.</description>
+		<description lang="en_NZ">Estuary ATF is a modified version of Estuary designed to improve Live TV, Music and Music Video features. It is designed to be very close to Estuary and keep its great speed and simplicity.</description>
+		<description lang="en_US">Estuary ATF is a modified version of Estuary designed to improve Live TV, Music and Music Video features. It is designed to be very close to Estuary and keep its great speed and simplicity.</description>
 		<description lang="es_ES">Estuary es el skin por defecto para Kodi 17.0 o superior. Su objetivo es la facilidad de comprensión y uso para usuarios primerizos de Kodi.</description>
 		<description lang="fi_FI">Estuary on oletusulkoasu Kodin versiosta 17.0 lähtien. Se pyrkii olemaan helppo ymmärtää ja käyttää Kodin ensikäyttäjille. </description>
 		<description lang="fr_CA">Estuaire est l'habillage par défaut pour Kodi 17.0 et ultérieure. Il s'efforce d'être facile à comprendre et à utiliser pour les utilisateurs débutants de Kodi.</description>
@@ -111,7 +111,7 @@
 		<disclaimer lang="zh_TW">Estuary 是 Kodi 預設的佈景主題，移除它可能會造成問題</disclaimer>
 		<platform>all</platform>
 		<license>CC BY-SA 4.0, GNU GENERAL PUBLIC LICENSE Version 2.0</license>
-		<forum>http://forum.kodi.tv/</forum>
+		<forum>https://forum.kodi.tv/showthread.php?tid=325600</forum>
 		<source>https://github.com/zag2me/skin.estuary-atf/</source>
 			<assets>
 				<icon>icon.png</icon>
