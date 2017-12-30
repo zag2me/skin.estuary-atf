@@ -27,30 +27,30 @@
 					<preloaditems>1</preloaditems>
 					<pagecontrol>60</pagecontrol>
 					<!-- Focused -->
-					<focusedlayout height="50">
+					<focusedlayout height="60">
 						<!-- Focused selection image-->
 						<control type="image">
-							<left>0</left>
+							<left>10</left>
 							<top>10</top>
 							<right>0</right>
 							<bottom>0</bottom>
-							<height>50</height>
+							<height>60</height>
 							<texture colordiffuse="button_focus">lists/focus.png</texture>
 							<visible>Control.hasFocus(50)</visible>
 						</control>
 						<!-- Focused TV Channel Icon-->
 						<control type="image">
-							<right>875</right>
+							<right>850</right>
 							<top>10</top>
 							<width>80</width>
-							<height>50</height>
+							<height>60</height>
 							<aspectratio align="right">keep</aspectratio>
 							<texture>$INFO[listitem.icon]</texture>
 						</control>
 						<!-- Focused Progress icon-->
 						<control type="progress">
-							<left>140</left>
-							<top>28</top>
+							<left>167</left>
+							<top>34</top>
 							<width>40</width>
 							<height>12</height>
 							<midtexture border="3">progress/texturebg_white.png</midtexture>
@@ -60,29 +60,29 @@
 						<!-- Red Record button when focused -->
 						<control type="image">
 							<right>10</right>
-							<top>15</top>
+							<top>20</top>
 							<width>40</width>
 							<height>40</height>
 							<texture>$VAR[PVRStatusImageVar]</texture>
 						</control>
 						<!-- channel name and program when focused -->
 						<control type="label">
-							<left>195</left>
-							<top>17</top>
+							<left>222</left>
+							<top>21</top>
 							<height>50</height>
 							<right>130</right>
 							<aligny>top</aligny>
-							<font>font10</font>
+							<font>font12</font>
 							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 							<label>$INFO[ListItem.Label] - $INFO[ListItem.Title]</label>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>	
 						<!-- channel number when focused -->
 						<control type="label">
-							<left>0</left>
-							<top>14</top>
+							<left>7</left>
+							<top>20</top>
 							<height>90</height>
-							<width>45</width>
+							<width>70</width>
 							<align>center</align>
 							<aligny>top</aligny>
 							<font>font12_title</font>
@@ -91,20 +91,20 @@
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>						
 					</focusedlayout>
-					<itemlayout height="50">
+					<itemlayout height="60">
 						<!-- Unfocused channel icon -->
 						<control type="image">
-							<right>880</right>
-							<top>15</top>
+							<right>850</right>
+							<top>10</top>
 							<width>80</width>
-							<height>40</height>
+							<height>60</height>
 							<aspectratio align="right">keep</aspectratio>
 							<texture>$INFO[listitem.icon]</texture>
 						</control>
 						<!-- Left Hand Progress bar -->
 						<control type="progress">
-							<left>140</left>
-							<top>28</top>
+							<left>167</left>
+							<top>34</top>
 							<width>40</width>
 							<height>12</height>
 							<colordiffuse>88FFFFFF</colordiffuse>
@@ -121,22 +121,22 @@
 						</control>
 						<!-- Channel Name Unselected -->
 						<control type="label">
-							<left>195</left>
-							<top>17</top>
+							<left>222</left>
+							<top>21</top>
 							<height>150</height>
 							<right>130</right>
 							<aligny>top</aligny>
-							<font>font10</font>
+							<font>font12</font>
 							<label>$INFO[ListItem.Label] - $INFO[ListItem.Title]</label>
 							<animation effect="slide" start="0,0" end="0,14" time="0" condition="String.IsEmpty(ListItem.Title)">Conditional</animation>
 							<shadowcolor>text_shadow</shadowcolor>
 						</control>
 						<!-- channel number unselected -->
 						<control type="label">
-							<left>0</left>
-							<top>14</top>
+							<left>7</left>
+							<top>20</top>
 							<height>90</height>
-							<width>45</width>
+							<width>70</width>
 							<align>center</align>
 							<aligny>top</aligny>
 							<font>font12_title</font>
@@ -203,7 +203,7 @@
 							<right>90</right>
 							<aligny>center</aligny>
 							<align>right</align>
-							<label>$INFO[ListItem.Title] hello</label>
+							<label>$INFO[ListItem.Title]</label>
 						</control>
 						<control type="label">
 							<left>12</left>
@@ -290,46 +290,44 @@
 					<orientation>vertical</orientation>
 					<animation effect="zoom" start="100,100" end="50,100" center="-48,0" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(60)">conditional</animation>
 				</control>
-				<!-- Right side panel progress bar -->
+				<!-- Right side panel -->
 				<control type="group">
 					<left>0</left>
 					<top>202</top>
+					<!-- Right side panel progress bar -->
 					<control type="progress">
-						<top>125</top>
+						<top>50</top>
 						<width>520</width>
 						<height>12</height>
 						<colordiffuse>88FFFFFF</colordiffuse>
 						<visible>ListItem.HasEpg</visible>
 						<info>ListItem.Progress</info>
 					</control>
+					<!-- Right side panel start time-->
 					<control type="label">
-						<top>82</top>
+						<top>10</top>
 						<width>560</width>
 						<height>262</height>
 						<label>$INFO[ListItem.StartTime]</label>
 					</control>
+					<!-- Right side panel end time -->
 					<control type="label">
-						<top>82</top>
+						<top>10</top>
 						<width>520</width>
 						<height>262</height>
 						<align>right</align>
 						<label>$INFO[ListItem.EndTime]</label>
 					</control>
+					<!-- Right side panel duration -->
 					<control type="label">
-						<top>-80</top>
-						<width>540</width>
-						<height>262</height>
-						<font>font45</font>
-						<label>$INFO[ListItem.ChannelName]</label>
-					</control>
-					<control type="label">
-						<top>20</top>
+						<top>-37</top>
 						<width>540</width>
 						<height>625</height>
 						<label>$INFO[ListItem.Duration,$LOCALIZE[180]: ]</label>
 					</control>
+					<!-- Right side panel program name -->
 					<control type="label">
-						<top>-20</top>
+						<top>-90</top>
 						<width>540</width>
 						<height>625</height>
 						<label>[B]$INFO[ListItem.EpgEventTitle,,[CR]][/B]</label>
@@ -337,19 +335,37 @@
 				</control>
 				<!-- Panel TV Channel Logo -->
 				<control type="image">
-					<left>540</left>
-					<top>122</top>
+					<left>550</left>
+					<top>90</top>
 					<width>240</width>
 					<height>220</height>
 					<aspectratio align="right">keep</aspectratio>
 					<texture fallback="DefaultTVShows.png">$INFO[Listitem.Icon]</texture>
 					<fadetime>200</fadetime>
 				</control>
+				<!-- Right side panel Episode short description -->
 				<control type="textbox">
 					<top>382</top>
 					<width>820</width>
-					<bottom>114</bottom>
-					<label>[B]$INFO[ListItem.EpisodeName,,[CR]][/B]$INFO[ListItem.Plot]</label>
+					<bottom>454</bottom>
+					<label>$INFO[ListItem.Plot]</label>
+				</control>
+				<!-- Right side panel Now: Title string -->
+				<control type="textbox">
+					<top>325</top>
+					<width>800</width>
+					<right>70</right>
+					<height>80</height>
+					<visible>!String.isempty(ListItem.Title)</visible>
+					<label>$INFO[ListItem.Title,[COLOR grey]$LOCALIZE[19030]: [/COLOR]]</label>
+					<include>OpenClose_Right</include>
+				</control>
+				<!-- Right side panel Next Episode short description -->
+				<control type="textbox">
+					<top>750</top>
+					<width>820</width>
+					<bottom>80</bottom>
+					<label>$INFO[ListItem.NextPlot]</label>
 				</control>
 				<control type="textbox">
 					<top>612</top>
@@ -367,16 +383,16 @@
 				<param name="breadcrumbs_label" value="$VAR[BreadcrumbsPVRChannelsVar]" />
 			</include>
 			<include content="BottomBar">
-				<param name="info_visible" value="true" />
+				<param name="info_visible" value="false" />
 			</include>
+			<!-- Right side panel next episode title -->
 			<control type="textbox">
-				<bottom>15</bottom>
+				<bottom>310</bottom>
 				<width>800</width>
-				<right>40</right>
+				<right>70</right>
 				<height>80</height>
-				<align>right</align>
 				<visible>!String.isempty(ListItem.NextTitle)</visible>
-				<label>$INFO[ListItem.NextTitle,[COLOR grey]$LOCALIZE[19031]:[CR][/COLOR]] $INFO[ListItem.NextStartTime]</label>
+				<label>$INFO[ListItem.NextTitle,[COLOR grey]$LOCALIZE[19031]: [/COLOR]]</label>
 				<include>OpenClose_Right</include>
 			</control>
 			<include>MediaMenuMouseOverlay</include>
