@@ -105,9 +105,9 @@
 						<texturenofocus />
 						<radioposx>1</radioposx>
 						<radioposy>0</radioposy>
-						<selected>!Player.Recording</selected>
-						<onclick>PlayerControl(Record)</onclick>
-						<visible>Player.CanRecord</visible>
+						<selected>!PVR.IsRecordingPlayingChannel</selected>
+						<onclick>PVR.ToggleRecordPlayingChannel</onclick>
+						<visible>PVR.CanRecordPlayingChannel</visible>
 						<visible>VideoPlayer.Content(livetv)</visible>
 					</control>
 				</control>
@@ -126,14 +126,7 @@
 					<ondown condition="Control.HasFocus(255)">13103</ondown>
 					<onleft>606</onleft>
 					<onright>600</onright>
-<!-- 					<control type="radiobutton" id="70011">
-						<include content="OSDButton">
-							<param name="texture" value="osd/fullscreen/buttons/information.png"/>
-						</include>
-						<onclick>Action(Close)</onclick>
-						<onclick>ActivateWindow(fullscreeninfo)</onclick>
-					</control>
- -->					<control type="radiobutton" id="70040">
+					<control type="radiobutton" id="70040">
 						<include content="OSDButton">
 							<param name="texture" value="osd/fullscreen/buttons/channels.png"/>
 						</include>
@@ -214,7 +207,7 @@
 					<textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>Player.Progress</info>
 					<action>seek</action>
-					<visible>!Control.HasFocus(87)</visible>
+					<visible>!Control.HasFocus(87) + !VideoPlayer.HasEpg</visible>
 				</control>
 				<control type="slider">
 					<top>-5</top>
@@ -226,7 +219,29 @@
 					<textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
 					<info>Player.Progress</info>
 					<action>seek</action>
-					<visible>Control.HasFocus(87)</visible>
+					<visible>Control.HasFocus(87) + !VideoPlayer.HasEpg</visible>
+				</control>
+				<control type="slider">
+					<top>-5</top>
+					<left>0</left>
+					<width>100%</width>
+					<height>25</height>
+					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+					<textureslidernib>osd/progress/nub_leftright.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
+					<info>PVR.EpgEventProgress</info>
+					<visible>!Control.HasFocus(87) + VideoPlayer.HasEpg</visible>
+				</control>
+				<control type="slider">
+					<top>-5</top>
+					<left>0</left>
+					<width>100%</width>
+					<height>25</height>
+					<texturesliderbar colordiffuse="00FFFFFF">osd/progress/nub_leftright.png</texturesliderbar>
+					<textureslidernib colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernib>
+					<textureslidernibfocus colordiffuse="button_focus">osd/progress/nub_leftright.png</textureslidernibfocus>
+					<info>PVR.EpgEventProgress</info>
+					<visible>Control.HasFocus(87) + VideoPlayer.HasEpg</visible>
 				</control>
 			</control>
 		</control>
