@@ -886,13 +886,6 @@
 							<visible>!Skin.HasSetting(HomeMenuNoTVButton)</visible>
 						</item>
 						<item>
-							<label>Sports</label>
-							<property name="menu_id">$NUMBER[12000]</property>
-							<onclick>ActivateWindow(TVChannels)</onclick>
-							<thumb>icons/sidemenu/livetv.png</thumb>
-							<property name="id">livetv</property>
-						</item>
-						<item>
 							<label>$LOCALIZE[2]</label>
 							<onclick>ActivateWindow(Music,root,return)</onclick>
 							<property name="menu_id">$NUMBER[7000]</property>
