@@ -16,6 +16,7 @@
 	<include file="View_500_Wall.xml" />
 	<include file="View_501_Banner.xml" />
 	<include file="View_502_FanArt.xml" />
+	<include file="View_503_WideWall.xml" />
 	<include file="Variables.xml" />
 	<constant name="DepthDialog">0.50</constant>
 	<constant name="DepthDialog+">0.52</constant>
@@ -782,6 +783,16 @@
 				<onclick>Control.Move($PARAM[list_id],1)</onclick>
 				<visible allowhiddenfocus="true">Container($PARAM[list_id]).HasNext + [Control.HasFocus($PARAM[list_id]) | Control.HasFocus($PARAM[list_id]501)]</visible>
 			</control>
+			<control type="button" id="$PARAM[list_id]503">
+				<left>$PARAM[left_posx]</left>
+				<top>$PARAM[posy]</top>
+				<width>28</width>
+				<height>28</height>
+				<texturefocus />
+				<texturenofocus />
+				<onclick>Control.Move($PARAM[list_id],-1)</onclick>
+				<visible allowhiddenfocus="true">Container($PARAM[list_id]).HasPrevious + [Control.HasFocus($PARAM[list_id]) | Control.HasFocus($PARAM[list_id]503)]</visible>
+			</control>
 		</definition>
 	</include>
 	<include name="DialogBackgroundCommons">
@@ -936,6 +947,7 @@
 					<height>100</height>
 					<label></label>
 					<onclick>Action(Back)</onclick>
+					<visible>!Window.IsActive(home)</visible>
 					<texturefocus />
 					<texturenofocus />
 				</control>
