@@ -80,27 +80,37 @@
 					</control>
 				</focusedlayout>
 				<!-- Custom Landscape image-->
-				<itemlayout height="200" width="300" condition="Container.Content(artists)">
+				<itemlayout width="365" height="206" condition="Container.Content(artists)">
 					<control type="image">
 						<left>0</left>
 						<top>80</top>
-						<width>316</width>
-						<height>186</height>
-						<texture fallback="$PARAM[fallback_image]" background="true">$INFO[ListItem.Art(landscape)]</texture>
+						<width>360</width>
+						<height>206</height>
+						<texture fallback="DefaultFolder.png" background="true">$INFO[ListItem.Art(landscape)]</texture>
 						<aspectratio>keep</aspectratio>
-						<bordersize>20</bordersize>
+						<bordersize>10</bordersize>
 					</control>
 				</itemlayout>
-				<!-- Custom Landscape image Focused-->
-				<focusedlayout height="200" width="300" condition="Container.Content(artists)">
+				<!-- Custom Landscape image Focused -->
+				<focusedlayout width="365" height="206" condition="Container.Content(artists)">
+					<!-- Show a selection box around the widethumb -->
 					<control type="image">
 						<left>0</left>
 						<top>80</top>
-						<width>320</width>
-						<height>190</height>
+						<width>360</width>
+						<height>206</height>
+						<texture colordiffuse="button_focus">colors/grey.png</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
+					</control>
+					<control type="image">
+						<left>0</left>
+						<top>80</top>
+						<width>360</width>
+						<height>206</height>
 						<texture fallback="$PARAM[fallback_image]" background="true">$INFO[ListItem.Art(landscape)]</texture>
+						<bordertexture border="21">overlays/shadow.png</bordertexture>
 						<aspectratio>keep</aspectratio>
-						<bordersize>20</bordersize>
+						<bordersize>4</bordersize>
 					</control>
 				</focusedlayout>
 				<itemlayout height="390" width="300" condition="Container.Content(addons)">
