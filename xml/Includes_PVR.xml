@@ -337,17 +337,19 @@
 					</control>
 				</focusedchannellayout>
 				<itemlayout height="62" width="60">
+					<!-- The Item program background texture unselected -->
 					<control type="image" id="2">
 						<width>58</width>
 						<height>58</height>
-						<texture border="3" fallback="windows/pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</texture>
+						<texture border="3" fallback="windows/pvr/epg-genres/0.png">windows/pvr/epg-genres/128.png</texture>
 					</control>
+					<!-- The Item label for each program unselected -->
 					<control type="label" id="1">
 						<left>6</left>
-						<top>0</top>
+						<top>10</top>
 						<height>36</height>
 						<aligny>center</aligny>
-						<font>font13</font>
+						<font>font10</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
@@ -372,19 +374,21 @@
 						<height>58</height>
 						<texture border="8" colordiffuse="button_focus">buttons/thumbnail_focused.png</texture>
 					</control>
+					<!-- The Item program background texture selected -->
 					<control type="image" id="2">
 						<width>58</width>
 						<height>58</height>
 						<top>0</top>
-						<texture border="3" fallback="windows/pvr/epg-genres/0.png">$INFO[ListItem.Property(GenreType),windows/pvr/epg-genres/,.png]</texture>
+						<texture border="3" fallback="windows/pvr/epg-genres/0.png">windows/pvr/epg-genres/48.png</texture>
 						<visible>!Control.HasFocus($PARAM[control_id])</visible>
 					</control>
+					<!-- The Item label for each program selected -->
 					<control type="label" id="1">
 						<left>6</left>
-						<top>0</top>
+						<top>10</top>
 						<height>36</height>
 						<aligny>center</aligny>
-						<font>font13</font>
+						<font>font10</font>
 						<label>$INFO[ListItem.Label]</label>
 					</control>
 					<control type="image">
