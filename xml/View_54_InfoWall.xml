@@ -52,13 +52,13 @@
 		<definition>
 		<!-- Music Thumb Wall-->
 			<control type="image">
-				<!-- Background Shadow 	-->	
+				<!-- Background Shadow
 				<top>4</top>
 				<left>4</left>
 				<width>284</width>
 				<height>278</height>
 				<texture>dialogs/dialog-bg-nobo.png</texture>
-				<bordertexture border="21">overlays/shadow.png</bordertexture> 
+				<bordertexture border="21">overlays/shadow.png</bordertexture>  	-->	
 			</control>
 			<!-- Selected item-->
 			<control type="image">
