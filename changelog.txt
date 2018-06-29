@@ -1,4 +1,9 @@
-﻿[B]1.0.1[/B]
+﻿[B]1.0.6[/B]
+• Remove overlay for CD and DVD covers for performance reasons
+• Make shift view centered
+
+
+[B]1.0.1[/B]
 • Add coloured media flags
 • Fix music Video Aspect Ratio
 • Add music star ratings in list view
