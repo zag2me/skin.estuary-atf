@@ -88,7 +88,7 @@
 				<width>300</width>
 				<height>300</height>
 				<texture>overlays/cdbox-duller.png</texture>
-				</control>
+				</control>-->
 			<control type="textbox">
 				<left>28</left>
 				<top>289</top>
@@ -99,7 +99,7 @@
 				<aligny>center</aligny>
 				<label>$PARAM[single_label]</label>
 				<visible>!String.IsEqual(ListItem.DBType,album)</visible>
-			</control>-->
+			</control>
 			<!-- Album Labeling-->
 			<control type="group">
 				<visible>String.IsEqual(ListItem.DBType,album)</visible>
