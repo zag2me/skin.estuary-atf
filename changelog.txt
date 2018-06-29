@@ -1,4 +1,8 @@
-﻿[B]1.0.6[/B]
+﻿[B]1.0.7[/B]
+• Fix missing Add-on label
+
+
+[B]1.0.6[/B]
 • Remove overlay for CD and DVD covers for performance reasons
 • Make shift view centered
 
