@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="View_56_CoverFlow">
+		<control type="group">
+			<description>Cover Viewtype</description>
+			<centertop>50%</centertop>
+			<left>0</left>
+			<height>880</height>
+			<!-- The gray bar at the top and the bottom for -->
+			<control type="group">
+				<visible>Control.IsVisible(56)</visible>
+				<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+				<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+				<animation effect="fade" time="200">VisibleChange</animation>
+				<!-- the Bottom gray bar -->
+				<control type="image">
+					<left>0</left>
+					<top>760</top>
+					<width>100%</width>
+					<height>150</height>
+					<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+				</control>
+				<!-- The Top Gray Bar -->
+				<control type="image">
+					<left>0</left>
+					<top>35</top>
+					<width>100%</width>
+					<height>190</height>
+					<texture colordiffuse="E6FFFFFF">dialogs/dialog-bg-nobo.png</texture>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(56)</visible>
+				<include>Visible_Right</include>
+				<include>OpenClose_Right</include>
+				<top>160</top>
+				<!-- The position on the selection-->
+				<control type="image">
+					<left>736</left>
+					<top>600</top>
+					<width>420</width>
+					<height>150</height>
+					<visible>Control.HasFocus(56)</visible>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<texture colordiffuse="button_focus">colors/grey.png</texture>
+					<animation effect="slide" start="0,0" end="-364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,1) | Integer.IsEqual(Container.Position,0)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="-364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,0)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,3) | Integer.IsEqual(Container.Position,4)">Conditional</animation>
+					<animation effect="slide" start="0,0" end="364,0" time="300" tween="sine" easing="inout" condition="Integer.IsEqual(Container.Position,4)">Conditional</animation>
+				</control>
+				<!-- The Items -->
+				<control type="fixedlist" id="56">
+					<left>-203</left>
+					<top>0</top>
+					<width>160%</width>
+					<height>800</height>
+					<focusposition>2</focusposition>
+					<movement>0</movement>
+					<pagecontrol>5199</pagecontrol>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+					<orientation>horizontal</orientation>
+					<visible>Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(musicvideos) | Container.Content(artists) | Container.Content(albums) | Container.Content(mixed) | Container.Content(images) | Container.Content(videos)</visible>
+					<onleft>53</onleft>
+					<onup>9000</onup>
+					<ondown>5199</ondown>
+					<onright>53</onright>
+					<preloaditems>1</preloaditems>
+					<viewtype label="CoverFlow">icon</viewtype>
+					<itemlayout width="465">
+						<!-- The Thumbnail unselected -->
+						<control type="image">
+							<depth>DepthContentPopout</depth>
+							<left>0</left>
+							<top>90</top>
+							<width>460</width>
+							<height>460</height>
+							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
+							<bordersize>20</bordersize>
+						</control>
+						<!-- Album glass overlay unselected-->
+						<control type="image">
+							<depth>DepthContentPopout</depth>
+							<left>0</left>
+							<top>90</top>
+							<width>460</width>
+							<height>460</height>
+							<texture>overlays/logo-glass-bg3.png</texture>
+							<bordersize>20</bordersize>
+						</control>
+						<!-- Non unselected item Label -->
+						<control type="textbox">
+							<left>60</left>
+							<top>570</top>
+							<width>330</width>
+							<height>210</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label] ($INFO[ListItem.Year])</label>
+						</control>
+						<!-- Non selected item watched tag-->
+						<control type="image">
+							<left>169</left>
+							<top>560</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$VAR[WallWatchedIconVar]</texture>
+						</control>
+					</itemlayout>
+					<focusedlayout width="465">
+						<!--Selected Item Thumb -->
+						<control type="image">
+							<depth>DepthContentPopout</depth>
+							<left>0</left>
+							<top>90</top>
+							<width>460</width>
+							<height>460</height>
+							<texture fallback="DefaultVideo.png">$VAR[ShiftThumbVar]</texture>
+							<bordersize>20</bordersize>
+						</control>
+						<!-- Album glass overlay selected-->
+						<control type="image">
+							<depth>DepthContentPopout</depth>
+							<left>0</left>
+							<top>90</top>
+							<width>460</width>
+							<height>460</height>
+							<texture>overlays/logo-glass-bg3.png</texture>
+							<bordersize>20</bordersize>
+						</control>
+						<!-- Selected item Label -->
+						<control type="textbox">
+							<left>60</left>
+							<top>570</top>
+							<width>330</width>
+							<height>210</height>
+							<align>center</align>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Label] ($INFO[ListItem.Year])</label>
+							<autoscroll time="3000" delay="3000" repeat="3000">True</autoscroll>
+						</control>
+						<!-- Selected item watched tag-->
+						<control type="image">
+							<left>169</left>
+							<top>560</top>
+							<width>32</width>
+							<height>32</height>
+							<texture>$VAR[WallWatchedIconVar]</texture>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group">
+				<visible>Control.IsVisible(56)</visible>
+				<include>Visible_Right</include>
+				<include>OpenClose_Right</include>
+				<!-- Middle hand text box-->
+				<control type="group">
+					<left>15%</left>
+					<right>15%</right>
+					<include content="ShiftTextbox">
+						<param name="textbox_id" value="53300" />
+						<param name="textbox_content" value="$VAR[ShiftMiddleTextBoxVar]" />
+					</include>
+				</control>
+				<!-- Only show extra info if its a collection -->
+				<control type="panel">
+					<left>0</left>
+					<top>48</top>
+					<width>2080</width>
+					<height>180</height>
+					<orientation>horizontal</orientation>
+					<visible>ListItem.IsCollection</visible>
+					<animation effect="fade" time="200">VisibleChange</animation>
+					<focusedlayout height="40" width="628">
+						<control type="label">
+							<textoffsetx>10</textoffsetx>
+							<height>40</height>
+							<width>628</width>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Title]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</focusedlayout>
+					<itemlayout height="40" width="628">
+						<control type="label">
+							<textoffsetx>10</textoffsetx>
+							<height>40</height>
+							<width>628</width>
+							<aligny>center</aligny>
+							<label>$INFO[ListItem.Year,[COLOR button_focus],[/COLOR]  -  ]$INFO[ListItem.Title]</label>
+							<shadowcolor>text_shadow</shadowcolor>
+						</control>
+					</itemlayout>
+					<content sortby="year" sortorder="descending">$VAR[InfoListPathVar]</content>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="ShiftTextbox">
+		<control type="group">
+			<animation effect="fade" time="200" start="0" end="100" condition="!String.IsEmpty(Control.GetLabel($PARAM[textbox_id]))">Conditional</animation>
+			<animation effect="fade" time="200" start="100" end="0" condition="String.IsEmpty(Control.GetLabel($PARAM[textbox_id]))">Conditional</animation>
+			<control type="textbox" id="$PARAM[textbox_id]">
+				<left>30</left>
+				<top>45</top>
+				<right>30</right>
+				<height>163</height>
+				<label>$PARAM[textbox_content]</label>
+				<shadowcolor>text_shadow</shadowcolor>
+			</control>
+		</control>
+	</include>
+</includes>
