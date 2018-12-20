@@ -31,6 +31,7 @@
 							<width>100%</width>
 							<height>44</height>
 							<texture colordiffuse="border_alpha">colors/white50.png</texture>
+							<visible>Control.IsVisible(50) | Control.IsVisible(51)</visible>
 						</control>
 						<control type="image">
 							<left>42</left>
