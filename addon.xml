@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.estuary-atf" version="1.0.8" name="Estuary-atf" provider-name="phil65, Ichabod Fletchman, zag">
+<addon id="skin.estuary-atf" version="1.0.9" name="Estuary-atf" provider-name="phil65, Ichabod Fletchman, zag">
 	<requires>
 		<import addon="xbmc.gui" version="5.13.0"/>
 	</requires>
