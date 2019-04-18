@@ -19,14 +19,18 @@ Tracklist Rating View
 
 <img src="https://github.com/zag2me/skin.estuary-atf/blob/master/resources/screenshot-02.jpg">
 
-Tracklist Rating View
-
-<img src="https://github.com/zag2me/skin.estuary-atf/blob/master/resources/screenshot-02.jpg">
-
 TVShow Banner 3 Column View
 
 <img src="https://github.com/zag2me/skin.estuary-atf/blob/master/resources/screenshot-03.jpg">
 
-TVShow Banner 3 Column View
+Artist Wide Thumb View
 
-<img src="https://github.com/zag2me/skin.estuary-atf/blob/master/resources/screenshot-03.jpg">
+<img src="https://github.com/zag2me/skin.estuary-atf/blob/master/resources/screenshot-04.jpg">
+
+Streaming Main Menu
+
+<img src="https://github.com/zag2me/skin.estuary-atf/blob/master/resources/screenshot-05.jpg">
+
+Album Wall View
+
+<img src="https://github.com/zag2me/skin.estuary-atf/blob/master/resources/screenshot-06.jpg">
